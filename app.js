@@ -42,7 +42,7 @@ function levelUp(){
     console.log(gameSeq);
     gameFlash(randBtn);
 }
-
+// ...
 function checkAns(idx){
     if (userSeq[idx]===gameSeq[idx]){
         if(userSeq.length==gameSeq.length){
@@ -50,13 +50,12 @@ function checkAns(idx){
         }
     }else{
         h2.innerText=`Game over!your score was${level}press any other key to start the game`;
+        h3.innerText=`the higest score ${level}`;
         document.querySelector("body").style.backgroundColor="red";
         setTimeout(function(){
             document.querySelector("body").style.backgroundColor="white";
         },150);
-        level.addEventListener("input",function(){
-            h3.innerText=`the higest score ${level}`;
-        });
+        
         
 
         reset();
